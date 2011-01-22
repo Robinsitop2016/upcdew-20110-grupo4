@@ -1,32 +1,33 @@
 package pe.edu.upc.dew.grupo4.model;
 
 public class Sala {
-	private int idsala;
-	private int capacida;
-	private Cine cine;
-
-	public Cine getCine() {
-		return cine;
+	private int cod_sala;
+	private int capacidad;
+	private boolean is3d;
+	
+	public int getCod_sala() 
+	{
+		return cod_sala;
 	}
-
-	public void setCine(Cine cine) {
-		this.cine = cine;
+	public void setCod_sala(int cod_sala) 
+	{
+		this.cod_sala = cod_sala;
 	}
-
-	public int getIdsala() {
-		return idsala;
+	public int getCapacidad() 
+	{
+		return capacidad;
 	}
-
-	public void setIdsala(int idsala) {
-		this.idsala = idsala;
+	public void setCapacidad(int capacidad) {
+		
+		this.capacidad = capacidad;
 	}
-
-	public int getCapacida() {
-		return capacida;
+	public boolean isIs3d() 
+	{
+		return is3d;
 	}
-
-	public void setCapacida(int capacida) {
-		this.capacida = capacida;
+	public void setIs3d(boolean is3d) {
+		this.is3d = is3d;
 	}
+	
 
 }
