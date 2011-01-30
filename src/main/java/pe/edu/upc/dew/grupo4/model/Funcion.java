@@ -2,41 +2,41 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Funcion {
 
-	private int cod_funcion;
-	private Pelicula peli_funcion;
-	private String hoin_funcion;
-	private String hofi_funcion;
+	private int codFuncion; // Codigo de Funcion
+	private Pelicula peliFuncion; // Pelicula de Funcion
+	private String hoinFuncion; // Hora de Inicio de Funcion
+	private String hofiFuncion; // Hora de Fin de Funcion
 
-	public int getCod_funcion() {
-		return cod_funcion;
+	public int getCodFuncion() {
+		return codFuncion;
 	}
 
-	public void setCod_funcion(int cod_funcion) {
-		this.cod_funcion = cod_funcion;
+	public void setCodFuncion(int codFuncion) {
+		this.codFuncion = codFuncion;
 	}
 
-	public Pelicula getPeli_funcion() {
-		return peli_funcion;
+	public Pelicula getPeliFuncion() {
+		return peliFuncion;
 	}
 
-	public void setPeli_funcion(Pelicula peli_funcion) {
-		this.peli_funcion = peli_funcion;
+	public void setPeliFuncion(Pelicula peliFuncion) {
+		this.peliFuncion = peliFuncion;
 	}
 
-	public String getHoin_funcion() {
-		return hoin_funcion;
+	public String getHoinFuncion() {
+		return hoinFuncion;
 	}
 
-	public void setHoin_funcion(String hoin_funcion) {
-		this.hoin_funcion = hoin_funcion;
+	public void setHoinFuncion(String hoinFuncion) {
+		this.hoinFuncion = hoinFuncion;
 	}
 
-	public String getHofi_funcion() {
-		return hofi_funcion;
+	public String getHofiFuncion() {
+		return hofiFuncion;
 	}
 
-	public void setHofi_funcion(String hofi_funcion) {
-		this.hofi_funcion = hofi_funcion;
+	public void setHofiFuncion(String hofiFuncion) {
+		this.hofiFuncion = hofiFuncion;
 	}
 
 }

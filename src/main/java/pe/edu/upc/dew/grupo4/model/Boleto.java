@@ -2,59 +2,50 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Boleto {
 
-	private int cod_boleto;
-	private String fech_boleto;
-	private String fech_funcion;
-	private Sala sala_boleto;
-	private Funcion func_boleto;
-	private Cliente clie_boleto;
+	private int codBoleto; // Codigo de Boleto
+	private String fechBoleto; // Fecha de Impresion de Boleto
+	private Sala salaFuncion; // Sala de Funcion
+	private Funcion funcBoleto; // Funcion de Boleto
+	private Cliente clieBoleto; // Cliente de Boleto
 
-	public int getCod_boleto() {
-		return cod_boleto;
+	public int getCodBoleto() {
+		return codBoleto;
 	}
 
-	public void setCod_boleto(int cod_boleto) {
-		this.cod_boleto = cod_boleto;
+	public void setCodBoleto(int codBoleto) {
+		this.codBoleto = codBoleto;
 	}
 
-	public String getFech_boleto() {
-		return fech_boleto;
+	public String getFechBoleto() {
+		return fechBoleto;
 	}
 
-	public void setFech_boleto(String fech_boleto) {
-		this.fech_boleto = fech_boleto;
+	public void setFechBoleto(String fechBoleto) {
+		this.fechBoleto = fechBoleto;
 	}
 
-	public String getFech_funcion() {
-		return fech_funcion;
+	public Sala getSalaFuncion() {
+		return salaFuncion;
 	}
 
-	public void setFech_funcion(String fech_funcion) {
-		this.fech_funcion = fech_funcion;
+	public void setSalaFuncion(Sala salaFuncion) {
+		this.salaFuncion = salaFuncion;
 	}
 
-	public Sala getSala_boleto() {
-		return sala_boleto;
+	public Funcion getFuncBoleto() {
+		return funcBoleto;
 	}
 
-	public void setSala_boleto(Sala sala_boleto) {
-		this.sala_boleto = sala_boleto;
+	public void setFuncBoleto(Funcion funcBoleto) {
+		this.funcBoleto = funcBoleto;
 	}
 
-	public Funcion getFunc_boleto() {
-		return func_boleto;
+	public Cliente getClieBoleto() {
+		return clieBoleto;
 	}
 
-	public void setFunc_boleto(Funcion func_boleto) {
-		this.func_boleto = func_boleto;
-	}
-
-	public Cliente getClie_boleto() {
-		return clie_boleto;
-	}
-
-	public void setClie_boleto(Cliente clie_boleto) {
-		this.clie_boleto = clie_boleto;
+	public void setClieBoleto(Cliente clieBoleto) {
+		this.clieBoleto = clieBoleto;
 	}
 
 }
