@@ -2,50 +2,59 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Pelicula {
 
-	private int cod_pelicula;
-	private String nam_pelicula;
-	private String gen_pelicula;
-	private int dura_pelicula;
-	private int clas_pelicula;
-
-	public int getCod_pelicula() {
-		return cod_pelicula;
+	private int codPelicula; // Codigo de Pelicula
+	private String namPelicula; // Nombre de Pelicula
+	private String genPelicula; // Genero de Pelicula
+	private int duraPelicula; // Duracion de Pelicula (Minutos)
+	private int clasPelicula; // Clasificacion de Pelicula
+	private int estadoPelicula; // Estado de Pelicula (Activo Inactivo)
+	
+	public int getEstadoPelicula() {
+		return estadoPelicula;
 	}
 
-	public void setCod_pelicula(int cod_pelicula) {
-		this.cod_pelicula = cod_pelicula;
+	public void setEstadoPelicula(int estadoPelicula) {
+		this.estadoPelicula = estadoPelicula;
 	}
 
-	public String getNam_pelicula() {
-		return nam_pelicula;
+	public int getCodPelicula() {
+		return codPelicula;
 	}
 
-	public void setNam_pelicula(String nam_pelicula) {
-		this.nam_pelicula = nam_pelicula;
+	public void setCodPelicula(int codPelicula) {
+		this.codPelicula = codPelicula;
 	}
 
-	public String getGen_pelicula() {
-		return gen_pelicula;
+	public String getNamPelicula() {
+		return namPelicula;
 	}
 
-	public void setGen_pelicula(String gen_pelicula) {
-		this.gen_pelicula = gen_pelicula;
+	public void setNamPelicula(String namPelicula) {
+		this.namPelicula = namPelicula;
 	}
 
-	public int getDura_pelicula() {
-		return dura_pelicula;
+	public String getGenPelicula() {
+		return genPelicula;
 	}
 
-	public void setDura_pelicula(int dura_pelicula) {
-		this.dura_pelicula = dura_pelicula;
+	public void setGenPelicula(String genPelicula) {
+		this.genPelicula = genPelicula;
 	}
 
-	public int getClas_pelicula() {
-		return clas_pelicula;
+	public int getDuraPelicula() {
+		return duraPelicula;
 	}
 
-	public void setClas_pelicula(int clas_pelicula) {
-		this.clas_pelicula = clas_pelicula;
+	public void setDuraPelicula(int duraPelicula) {
+		this.duraPelicula = duraPelicula;
+	}
+
+	public int getClasPelicula() {
+		return clasPelicula;
+	}
+
+	public void setClasPelicula(int clasPelicula) {
+		this.clasPelicula = clasPelicula;
 	}
 
 }

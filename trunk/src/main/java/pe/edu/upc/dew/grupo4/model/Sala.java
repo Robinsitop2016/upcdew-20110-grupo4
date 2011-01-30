@@ -4,50 +4,50 @@ import java.util.List;
 
 public class Sala {
 
-	private int cod_sala;
-	private int nro_sala;
-	private int capa_sala;
-	private String atri_sala;
-	private List<Funcion> func_sala;
+	private int codSala; // Codigo de Sala
+	private int nroSala; // Numero de Sala
+	private int capaSala; // Capacidad de Sala
+	private String atriSala; // Atributo de Sala
+	private List<Funcion> funcSala; // Funciones de Sala
 
-	public int getNro_sala() {
-		return nro_sala;
+	public int getNroSala() {
+		return nroSala;
 	}
 
-	public void setNro_sala(int nro_sala) {
-		this.nro_sala = nro_sala;
+	public void setNroSala(int nroSala) {
+		this.nroSala = nroSala;
 	}
 
-	public int getCod_sala() {
-		return cod_sala;
+	public int getCodSala() {
+		return codSala;
 	}
 
-	public void setCod_sala(int cod_sala) {
-		this.cod_sala = cod_sala;
+	public void setCodSala(int codSala) {
+		this.codSala = codSala;
 	}
 
-	public int getCapa_sala() {
-		return capa_sala;
+	public int getCapaSala() {
+		return capaSala;
 	}
 
-	public void setCapa_sala(int capa_sala) {
-		this.capa_sala = capa_sala;
+	public void setCapaSala(int capaSala) {
+		this.capaSala = capaSala;
 	}
 
-	public String getAtri_sala() {
-		return atri_sala;
+	public String getAtriSala() {
+		return atriSala;
 	}
 
-	public void setAtri_sala(String atri_sala) {
-		this.atri_sala = atri_sala;
+	public void setAtriSala(String atriSala) {
+		this.atriSala = atriSala;
 	}
 
-	public List<Funcion> getFunc_sala() {
-		return func_sala;
+	public List<Funcion> getFuncSala() {
+		return funcSala;
 	}
 
-	public void setFunc_sala(List<Funcion> func_sala) {
-		this.func_sala = func_sala;
+	public void setFuncSala(List<Funcion> funcSala) {
+		this.funcSala = funcSala;
 	}
 
 }

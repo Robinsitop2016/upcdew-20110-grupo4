@@ -2,95 +2,95 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Usuario {
 
-	private int codi_usuario; // Codigo de Usuario
-	private String name_usuario; // Nombre de Usuario
-	private String last_usuario; // Apellidos de Usuario
-	private String cargo_usuario; // Cargo de USuario
-	private String pass_usuario; // Password de Usuario
-	private String dni_usuario; // Dni de Usuario
-	private String fena_usuario; // Fecha de Nacimiento de Usuario
-	private String dir_usuario; // Direccion de Usuario
-	private int telf_usuario; // Telefono de Usuario
-	private String mail_usuario; // Correo de Usuario
+	private int codiUsuario; // Codigo de Usuario
+	private String nameUsuario; // Nombre de Usuario
+	private String lastUsuario; // Apellidos de Usuario
+	private String cargoUsuario; // Cargo de USuario
+	private String passUsuario; // Password de Usuario
+	private String dniUsuario; // Dni de Usuario
+	private String fenaUsuario; // Fecha de Nacimiento de Usuario
+	private String dirUsuario; // Direccion de Usuario
+	private int telfUsuario; // Telefono de Usuario
+	private String mailUsuario; // Correo de Usuario
 
-	public String getPassword() {
-		return pass_usuario;
+	public int getCodiUsuario() {
+		return codiUsuario;
 	}
 
-	public void setPassword(String pass_usuario) {
-		this.pass_usuario = pass_usuario;
+	public void setCodiUsuario(int codiUsuario) {
+		this.codiUsuario = codiUsuario;
 	}
 
-	public int getCodi_usuario() {
-		return codi_usuario;
+	public String getNameUsuario() {
+		return nameUsuario;
 	}
 
-	public void setCodi_usuario(int codi_usuario) {
-		this.codi_usuario = codi_usuario;
+	public void setNameUsuario(String nameUsuario) {
+		this.nameUsuario = nameUsuario;
 	}
 
-	public String getName_usuario() {
-		return name_usuario;
+	public String getLastUsuario() {
+		return lastUsuario;
 	}
 
-	public void setName_usuario(String name_usuario) {
-		this.name_usuario = name_usuario;
+	public void setLastUsuario(String lastUsuario) {
+		this.lastUsuario = lastUsuario;
 	}
 
-	public String getLast_usuario() {
-		return last_usuario;
+	public String getCargoUsuario() {
+		return cargoUsuario;
 	}
 
-	public void setLast_usuario(String last_usuario) {
-		this.last_usuario = last_usuario;
+	public void setCargoUsuario(String cargoUsuario) {
+		this.cargoUsuario = cargoUsuario;
 	}
 
-	public String getCargo_usuario() {
-		return cargo_usuario;
+	public String getPassUsuario() {
+		return passUsuario;
 	}
 
-	public void setCargo_usuario(String cargo_usuario) {
-		this.cargo_usuario = cargo_usuario;
+	public void setPassUsuario(String passUsuario) {
+		this.passUsuario = passUsuario;
 	}
 
-	public String getDni_usuario() {
-		return dni_usuario;
+	public String getDniUsuario() {
+		return dniUsuario;
 	}
 
-	public void setDni_usuario(String dni_usuario) {
-		this.dni_usuario = dni_usuario;
+	public void setDniUsuario(String dniUsuario) {
+		this.dniUsuario = dniUsuario;
 	}
 
-	public String getFena_usuario() {
-		return fena_usuario;
+	public String getFenaUsuario() {
+		return fenaUsuario;
 	}
 
-	public void setFena_usuario(String fena_usuario) {
-		this.fena_usuario = fena_usuario;
+	public void setFenaUsuario(String fenaUsuario) {
+		this.fenaUsuario = fenaUsuario;
 	}
 
-	public String getDir_usuario() {
-		return dir_usuario;
+	public String getDirUsuario() {
+		return dirUsuario;
 	}
 
-	public void setDir_usuario(String dir_usuario) {
-		this.dir_usuario = dir_usuario;
+	public void setDirUsuario(String dirUsuario) {
+		this.dirUsuario = dirUsuario;
 	}
 
-	public int getTelf_usuario() {
-		return telf_usuario;
+	public int getTelfUsuario() {
+		return telfUsuario;
 	}
 
-	public void setTelf_usuario(int telf_usuario) {
-		this.telf_usuario = telf_usuario;
+	public void setTelfUsuario(int telfUsuario) {
+		this.telfUsuario = telfUsuario;
 	}
 
-	public String getMail_usuario() {
-		return mail_usuario;
+	public String getMailUsuario() {
+		return mailUsuario;
 	}
 
-	public void setMail_usuario(String mail_usuario) {
-		this.mail_usuario = mail_usuario;
+	public void setMailUsuario(String mailUsuario) {
+		this.mailUsuario = mailUsuario;
 	}
 
 }
