@@ -6,4 +6,10 @@ public interface PeliculaDao {
 	
 	Pelicula getPeliculaPorCodigo(int codigo);
 
+	void delPelicula(int codigo);
+
+	void updatePelicula(Pelicula pelicula);
+	
+	
+
 }

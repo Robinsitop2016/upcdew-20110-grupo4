@@ -27,12 +27,42 @@ public class PeliculaDaoImpl implements PeliculaDao {
 				pelicula.setClasPelicula(resultSet.getInt("clas_pelicula"));
 				pelicula.setEstadoPelicula(resultSet.getInt("estado_pelicula"));
 			}
+			System.out.println(pelicula.getCodPelicula()+", "+pelicula.getNamPelicula()+", "+pelicula.getGenPelicula()+
+					", "+pelicula.getDuraPelicula()+", "+pelicula.getClasPelicula()+", "+pelicula.getEstadoPelicula());
+			
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
 		return pelicula;
+	}
+	
+	@Override
+	public void delPelicula(int codigo) {
+		Connection connection = JdbcUtils.getConnection();
+		try {
+			Statement statement = connection.createStatement();
+			String sql = "delete from pelicula where cod_pelicula = "+ codigo;
+			statement.execute(sql);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public void updatePelicula(Pelicula pelicula) {
+		Connection connection = JdbcUtils.getConnection();
+		try {
+			Statement statement = connection.createStatement();
+			String sql = "Update pelicula Set nam_Pelicula = '"+ pelicula.getNamPelicula() +"' where cod_pelicula = "+ pelicula.getCodPelicula();
+			statement.execute(sql);
+			Pelicula peliculaTmp = getPeliculaPorCodigo(pelicula.getCodPelicula());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
