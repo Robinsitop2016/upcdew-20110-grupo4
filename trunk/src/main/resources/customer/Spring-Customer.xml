@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+<bean id="peliculaDao" class="pe.edu.upc.dew.grupo4.dao.PeliculaDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="pelicula" class="pe.edu.upc.dew.grupo4.model.Pelicula">
+	<property name="codPelicula" value="2334"></property>
+	<property name="namPelicula" value="Star Wars III"></property>
+	<property name="genPelicula" value="Ciencia Ficcion"></property>
+	<property name="duraPelicula" value="150"></property>
+	<property name="clasPelicula" value="0"></property>
+	<property name="estPelicula" value="1"></property>
+	<property name="carPelicula" value="1"></property>
+</bean>
+
+</beans>

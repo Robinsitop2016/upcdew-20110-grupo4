@@ -2,6 +2,7 @@ package pe.edu.upc.dew.grupo4.dao;
 
 import java.util.List;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
 
 import pe.edu.upc.dew.grupo4.model.Pelicula;
@@ -11,38 +12,39 @@ public class PeliculaDaoJdbc extends SimpleJdbcDaoSupport implements
 
 	@Override
 	public Pelicula getPeliculaPorCodigo(int codigo) {
-		// TODO Auto-generated method stub
-		return null;
+		return getSimpleJdbcTemplate().queryForObject(
+				"select * from pelicula where codpelicula=?",
+				new BeanPropertyRowMapper<Pelicula>(Pelicula.class), codigo);
 	}
 
 	@Override
 	public List<Pelicula> getPeliculas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Pelicula> getPeliculasCarteleraEstreno() {
-		// TODO Auto-generated method stub
-		return null;
+		return getSimpleJdbcTemplate().query("select * from pelicula",
+				new BeanPropertyRowMapper<Pelicula>(Pelicula.class));
 	}
 
 	@Override
 	public void eliminar(int codigo) {
-		// TODO Auto-generated method stub
-		
+		getSimpleJdbcTemplate().update(
+				"delete from pelicula where codpelicula=?", codigo);
 	}
 
 	@Override
-	public void updatePelicula(int codigo) {
-		// TODO Auto-generated method stub
-		
+	public void updatePelicula(int codigo, String nombre) {
+		getSimpleJdbcTemplate().update(
+				"update pelicula set nampelicula=? where codpelicula=?",
+				new Object[] {codigo, nombre});
 	}
 
 	@Override
 	public void insertarPelicula(Pelicula pelicula) {
-		// TODO Auto-generated method stub
-		
+		getSimpleJdbcTemplate().update(
+				"insert into pelicula (codpelicula, nampelicula, genpelicula, durapelicula, claspelicula, estpelicula, carpelicula) " +
+				"values (?,?,?,?,?,?,?)",
+				new Object[] { pelicula.getCodPelicula(),
+						pelicula.getNamPelicula(), pelicula.getGenPelicula(),
+						pelicula.getDuraPelicula(), pelicula.getClasPelicula(),
+						pelicula.getEstPelicula(), pelicula.getCarPelicula()});
 	}
 
 }

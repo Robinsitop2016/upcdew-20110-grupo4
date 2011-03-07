@@ -10,11 +10,9 @@ public interface PeliculaDao {
 	
 	List<Pelicula> getPeliculas();
 	
-	List<Pelicula> getPeliculasCarteleraEstreno();
-	
 	void eliminar(int codigo);
 	
-	void updatePelicula(int codigo);
+	void updatePelicula(int codigo, String nombre);
 	
 	void insertarPelicula(Pelicula pelicula);
 
