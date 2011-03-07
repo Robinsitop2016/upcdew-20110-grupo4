@@ -7,14 +7,14 @@ public class Pelicula {
 	private String genPelicula; // Genero de Pelicula
 	private int duraPelicula; // Duracion de Pelicula (Minutos)
 	private int clasPelicula; // Clasificacion de Pelicula
-	private int estadoPelicula; // Estado de Pelicula (Activo Inactivo)
+	private int estPelicula; // Estado de Pelicula (Activo Inactivo)
 	
-	public int getEstadoPelicula() {
-		return estadoPelicula;
+	public int getEstPelicula() {
+		return estPelicula;
 	}
 
-	public void setEstadoPelicula(int estadoPelicula) {
-		this.estadoPelicula = estadoPelicula;
+	public void setEstPelicula(int estPelicula) {
+		this.estPelicula = estPelicula;
 	}
 
 	public int getCodPelicula() {

@@ -15,9 +15,4 @@ public class JdbcUtilsTest {
 		Assert.assertNotNull(connection);
 	}
 	
-	@Test
-	public void testCreate(){
-		JdbcUtils.create();
-	}
-	
 }
