@@ -2,8 +2,8 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Cliente {
 
-	private int codiCliente; //Codigo de Cliente
-	private String nameCliente; //Nombre de Cliente
+	private int codCliente; //Codigo de Cliente
+	private String namCliente; //Nombre de Cliente
 	private String lastCliente; //Apellido de Cliente
 	private String passCliente; //Password de Cliente
 	private String dniCliente; //Dni de Cliente
@@ -12,20 +12,20 @@ public class Cliente {
 	private int tlfCliente; //Teléfono de Cliente
 	private String mailCliente; //Correo de Cliente
 
-	public int getCodiCliente() {
-		return codiCliente;
+	public int getCodCliente() {
+		return codCliente;
 	}
 
-	public void setCodiCliente(int codiCliente) {
-		this.codiCliente = codiCliente;
+	public void setCodCliente(int codCliente) {
+		this.codCliente = codCliente;
 	}
 
-	public String getNameCliente() {
-		return nameCliente;
+	public String getNamCliente() {
+		return namCliente;
 	}
 
-	public void setNameCliente(String nameCliente) {
-		this.nameCliente = nameCliente;
+	public void setNamCliente(String namCliente) {
+		this.namCliente = namCliente;
 	}
 
 	public String getLastCliente() {

@@ -1,7 +1,6 @@
 package pe.edu.upc.dew.grupo4.dao;
 
 import java.util.List;
-
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
 
@@ -39,8 +38,7 @@ public class PeliculaDaoJdbc extends SimpleJdbcDaoSupport implements
 	@Override
 	public void insertarPelicula(Pelicula pelicula) {
 		getSimpleJdbcTemplate().update(
-				"insert into pelicula (codpelicula, nampelicula, genpelicula, durapelicula, claspelicula, estpelicula, carpelicula) " +
-				"values (?,?,?,?,?,?,?)",
+				"insert into pelicula values (?,?,?,?,?,?,?)",
 				new Object[] { pelicula.getCodPelicula(),
 						pelicula.getNamPelicula(), pelicula.getGenPelicula(),
 						pelicula.getDuraPelicula(), pelicula.getClasPelicula(),
