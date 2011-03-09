@@ -17,4 +17,20 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<property name="carPelicula" value="1"></property>
 </bean>
 
+<bean id="clienteDao" class="pe.edu.upc.dew.grupo4.dao.ClienteDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="cliente" class="pe.edu.upc.dew.grupo4.model.Cliente">
+	<property name="codCliente" value="2789"></property>
+	<property name="namCliente" value="David"></property>
+	<property name="lastCliente" value="Peralta"></property>
+	<property name="passCliente" value="dperalta"></property>
+	<property name="dniCliente" value="45678778"></property>
+	<property name="fenaCliente" value="1986-06-24"></property>
+	<property name="dirCliente" value="Jr. Los Claveles 234"></property>
+	<property name="tlfCliente" value="013245678"></property>
+	<property name="mailCliente" value="dperalta@hotmail.com"></property>
+</bean>
+
 </beans>
