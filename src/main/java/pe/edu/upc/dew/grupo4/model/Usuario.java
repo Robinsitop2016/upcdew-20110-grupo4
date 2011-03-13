@@ -2,8 +2,8 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Usuario {
 
-	private int codiUsuario; // Codigo de Usuario
-	private String nameUsuario; // Nombre de Usuario
+	private int codUsuario; // Codgo de Usuario
+	private String namUsuario; // Nombre de Usuario
 	private String lastUsuario; // Apellidos de Usuario
 	private String cargoUsuario; // Cargo de USuario
 	private String passUsuario; // Password de Usuario
@@ -13,20 +13,20 @@ public class Usuario {
 	private int telfUsuario; // Telefono de Usuario
 	private String mailUsuario; // Correo de Usuario
 
-	public int getCodiUsuario() {
-		return codiUsuario;
+	public int getCodUsuario() {
+		return codUsuario;
 	}
 
-	public void setCodiUsuario(int codiUsuario) {
-		this.codiUsuario = codiUsuario;
+	public void setCodUsuario(int codUsuario) {
+		this.codUsuario = codUsuario;
 	}
 
-	public String getNameUsuario() {
-		return nameUsuario;
+	public String getNamUsuario() {
+		return namUsuario;
 	}
 
-	public void setNameUsuario(String nameUsuario) {
-		this.nameUsuario = nameUsuario;
+	public void setNamUsuario(String namUsuario) {
+		this.namUsuario = namUsuario;
 	}
 
 	public String getLastUsuario() {

@@ -23,8 +23,8 @@ public class ClienteDaoTest {
 	
 	@Test
 	public void testGetClientePorCodigo(){
-		Cliente cliente = clienteDao.getClientePorCodigo(2123);
-		Assert.assertEquals("Julio", cliente.getNamCliente());
+		Cliente cliente = clienteDao.getClientePorCodigo(2124);
+		Assert.assertEquals("Luis", cliente.getNamCliente());
 	}
 	
 	@Test

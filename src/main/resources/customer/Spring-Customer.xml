@@ -33,4 +33,33 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<property name="mailCliente" value="dperalta@hotmail.com"></property>
 </bean>
 
+<bean id="usuarioDao" class="pe.edu.upc.dew.grupo4.dao.UsuarioDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="usuario" class="pe.edu.upc.dew.grupo4.model.Usuario">
+	<property name="codUsuario" value="1100"></property>
+	<property name="namUsuario" value="Teresa"></property>
+	<property name="lastUsuario" value="Espinoza"></property>
+	<property name="cargoUsuario" value="Administrador"></property>
+	<property name="passUsuario" value="tespinoza"></property>
+	<property name="dniUsuario" value="07022899"></property>
+	<property name="fenaUsuario" value="1950-06-24"></property>
+	<property name="dirUsuario" value="Jr. Los Andes 280"></property>
+	<property name="telfUsuario" value="013267899"></property>
+	<property name="mailUsuario" value="tespinoza@hotmail.com"></property>
+</bean>
+
+<bean id="salaDao" class="pe.edu.upc.dew.grupo4.dao.SalaDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="sala" class="pe.edu.upc.dew.grupo4.model.Sala">
+	<property name="codCine" value="130"></property>
+	<property name="codSala" value="160"></property>
+	<property name="nroSala" value="4"></property>
+	<property name="capaSala" value="40"></property>
+	<property name="atriSala" value="3D"></property>
+</bean>
+
 </beans>
