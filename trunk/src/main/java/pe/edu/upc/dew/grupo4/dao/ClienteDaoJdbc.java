@@ -41,7 +41,7 @@ public class ClienteDaoJdbc extends SimpleJdbcDaoSupport implements ClienteDao {
 						cliente.getNamCliente(), cliente.getLastCliente(),
 						cliente.getPassCliente(), cliente.getDniCliente(),
 						cliente.getFenaCliente(), cliente.getDirCliente(),
-						cliente.getTlfCliente(), cliente.getMailCliente()});
+						cliente.getTlfCliente(), cliente.getMailCliente() });
 	}
 
 }
