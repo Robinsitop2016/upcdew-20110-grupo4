@@ -2,15 +2,15 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Cliente {
 
-	private int codCliente; //Codigo de Cliente
-	private String namCliente; //Nombre de Cliente
-	private String lastCliente; //Apellido de Cliente
-	private String passCliente; //Password de Cliente
-	private String dniCliente; //Dni de Cliente
-	private String fenaCliente; //Fecha de Nacimiento de Cliente
-	private String dirCliente; //Dirección de Cliente
-	private int tlfCliente; //Teléfono de Cliente
-	private String mailCliente; //Correo de Cliente
+	private int codCliente; 		//Codigo de Cliente
+	private String namCliente; 		//Nombre de Cliente
+	private String lastCliente; 	//Apellido de Cliente
+	private String passCliente; 	//Password de Cliente
+	private String dniCliente; 		//Dni de Cliente
+	private String fenaCliente; 	//Fecha de Nacimiento de Cliente
+	private String dirCliente; 		//Dirección de Cliente
+	private int tlfCliente; 		//Teléfono de Cliente
+	private String mailCliente; 	//Correo de Cliente
 
 	public int getCodCliente() {
 		return codCliente;

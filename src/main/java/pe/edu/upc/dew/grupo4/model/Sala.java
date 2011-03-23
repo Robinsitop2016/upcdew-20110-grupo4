@@ -4,7 +4,12 @@ import java.util.List;
 
 public class Sala {
 
-	private int codCine; // Codigo de Cine
+	private int codCine; 			// Codigo de Cine
+	private int codSala; 			// Codigo de Sala
+	private int nroSala; 			// Numero de Sala
+	private int capaSala; 			// Capacidad de Sala
+	private String atriSala; 		// Atributo de Sala
+	private List<Funcion> funcSala; // Funciones de Sala
 
 	public int getCodCine() {
 		return codCine;
@@ -13,12 +18,6 @@ public class Sala {
 	public void setCodCine(int codCine) {
 		this.codCine = codCine;
 	}
-
-	private int codSala; // Codigo de Sala
-	private int nroSala; // Numero de Sala
-	private int capaSala; // Capacidad de Sala
-	private String atriSala; // Atributo de Sala
-	private List<Funcion> funcSala; // Funciones de Sala
 
 	public int getNroSala() {
 		return nroSala;

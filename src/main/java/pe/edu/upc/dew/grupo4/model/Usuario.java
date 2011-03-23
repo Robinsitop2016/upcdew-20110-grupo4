@@ -2,16 +2,16 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Usuario {
 
-	private int codUsuario; // Codgo de Usuario
-	private String namUsuario; // Nombre de Usuario
-	private String lastUsuario; // Apellidos de Usuario
-	private String cargoUsuario; // Cargo de USuario
-	private String passUsuario; // Password de Usuario
-	private String dniUsuario; // Dni de Usuario
-	private String fenaUsuario; // Fecha de Nacimiento de Usuario
-	private String dirUsuario; // Direccion de Usuario
-	private int telfUsuario; // Telefono de Usuario
-	private String mailUsuario; // Correo de Usuario
+	private int codUsuario; 		// Codgo de Usuario
+	private String namUsuario; 		// Nombre de Usuario
+	private String lastUsuario; 	// Apellidos de Usuario
+	private String cargoUsuario; 	// Cargo de USuario
+	private String passUsuario; 	// Password de Usuario
+	private String dniUsuario; 		// Dni de Usuario
+	private String fenaUsuario; 	// Fecha de Nacimiento de Usuario
+	private String dirUsuario; 		// Direccion de Usuario
+	private int telfUsuario; 		// Telefono de Usuario
+	private String mailUsuario; 	// Correo de Usuario
 
 	public int getCodUsuario() {
 		return codUsuario;
