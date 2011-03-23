@@ -8,32 +8,24 @@ import pe.edu.upc.dew.grupo4.model.Funcion;
 public class FuncionServiceImple implements FuncionService {
 	private FuncionDao funcionDao;
 
-	public Funcion getUsuarioPorCodigo(int codigo) {
-		// TODO Auto-generated method stub
-		return null;
+	public Funcion getFuncionPorCodigo(int codigo) {
+		return funcionDao.getFuncionPorCodigo(codigo);
 	}
 
-	@Override
 	public List<Funcion> getFunciones() {
-		// TODO Auto-generated method stub
-		return null;
+		return funcionDao.getFunciones();
 	}
 
-	@Override
 	public void actualizar(Funcion funcion) {
-		// TODO Auto-generated method stub
-
+		funcionDao.updateFuncion(funcion);
 	}
 
-	@Override
 	public void insertar(Funcion funcion) {
-		// TODO Auto-generated method stub
-
+		funcionDao.insertarFuncion(funcion);
 	}
 
-	@Override
 	public void eliminar(int codigo) {
-		// TODO Auto-generated method stub
+		funcionDao.eliminar(codigo);
 
 	}
 
