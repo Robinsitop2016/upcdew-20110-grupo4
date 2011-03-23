@@ -5,7 +5,7 @@ import java.util.List;
 import pe.edu.upc.dew.grupo4.model.Boleto;
 
 public interface BoletoDao {
-	Boleto getClientePorCodigo(int codigo);
+	Boleto getBoletoPorCodigo(int codigo);
 	
 	List<Boleto> getBoletos();
 	
