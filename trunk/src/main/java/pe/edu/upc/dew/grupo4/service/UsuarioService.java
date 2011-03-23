@@ -9,9 +9,9 @@ public interface UsuarioService {
 
 	List<Usuario> getUsuarios();
 
-	void actualizar(Usuario pelicula);
+	void actualizar(Usuario usuario);
 
-	void insertar(Usuario pelicula);
+	void insertar(Usuario usuario);
 
 	void eliminar(int codigo);
 	
