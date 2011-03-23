@@ -2,13 +2,13 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Pelicula {
 
-	private int codPelicula; // Codigo de Pelicula
+	private int codPelicula; 	// Codigo de Pelicula
 	private String namPelicula; // Nombre de Pelicula
 	private String genPelicula; // Genero de Pelicula
-	private int duraPelicula; // Duracion de Pelicula (Minutos)
-	private int clasPelicula; // Clasificacion de Pelicula
-	private int estPelicula; // Pelicula en Estreno
-	private int carPelicula; // Pelicula en Cartelera
+	private int duraPelicula; 	// Duracion de Pelicula (Minutos)
+	private int clasPelicula; 	// Clasificacion de Pelicula
+	private int estPelicula; 	// Pelicula en Estreno
+	private int carPelicula; 	// Pelicula en Cartelera
 
 	public int getCarPelicula() {
 		return carPelicula;

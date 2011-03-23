@@ -2,10 +2,10 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Funcion {
 
-	private int codFuncion; // Codigo de Funcion
-	private Pelicula peliFuncion; // Pelicula de Funcion
-	private String hoinFuncion; // Hora de Inicio de Funcion
-	private String hofiFuncion; // Hora de Fin de Funcion
+	private int codFuncion; 		// Codigo de Funcion
+	private Pelicula peliFuncion; 	// Pelicula de Funcion
+	private String hoinFuncion; 	// Hora de Inicio de Funcion
+	private String hofiFuncion; 	// Hora de Fin de Funcion
 
 	public int getCodFuncion() {
 		return codFuncion;
@@ -39,4 +39,5 @@ public class Funcion {
 		this.hofiFuncion = hofiFuncion;
 	}
 
+	
 }

@@ -4,12 +4,12 @@ import java.util.List;
 
 public class Cine {
 
-	public int codCine; // Codigo de Cine
-	public String nomCine; // Nombre de Cine
-	public String dirCine; // Direccion de Cine
-	private List<Sala> salaCine; // Lista de SalasxCine
-	private Usuario adminCine; // Administrador de Cine
-	private String mailCine; // Correo de Cine
+	public int codCine; 			// Codigo de Cine
+	public String nomCine; 			// Nombre de Cine
+	public String dirCine; 			// Direccion de Cine
+	private List<Sala> salaCine; 	// Lista de SalasxCine
+	private Usuario adminCine; 		// Administrador de Cine
+	private String mailCine; 		// Correo de Cine
 
 	public List<Sala> getSalaCine() {
 		return salaCine;

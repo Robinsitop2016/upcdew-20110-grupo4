@@ -2,9 +2,9 @@ package pe.edu.upc.dew.grupo4.model;
 
 public class Boleto {
 
-	private int codBoleto; // Codigo de Boleto
-	private String fechBoleto; // Fecha de Impresion de Boleto
-	private Sala salaFuncion; // Sala de Funcion
+	private int codBoleto; 		// Codigo de Boleto
+	private String fechBoleto; 	// Fecha de Impresion de Boleto
+	private Sala salaFuncion; 	// Sala de Funcion
 	private Funcion funcBoleto; // Funcion de Boleto
 	private Cliente clieBoleto; // Cliente de Boleto
 
