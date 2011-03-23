@@ -11,9 +11,10 @@ public interface ClienteDao {
 	List<Cliente> getClientes();
 	
 	void eliminar(int codigo);
-	
+
 	void updateCliente(int codigo, String nombre);
 	
 	void insertarCliente(Cliente cliente);
 
+	
 }
