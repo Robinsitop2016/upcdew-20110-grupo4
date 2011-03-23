@@ -6,8 +6,8 @@ import pe.edu.upc.dew.grupo4.model.Boleto;
 import pe.edu.upc.dew.grupo4.dao.BoletoDao;
 
 public class BoletoServiceImple implements BoletoService {
-
 	private BoletoDao boletoDao;
+	
 	public BoletoDao getBoletoDao() {
 		return boletoDao;
 	}
@@ -16,34 +16,26 @@ public class BoletoServiceImple implements BoletoService {
 		this.boletoDao = boletoDao;
 	}
 
-	@Override
 	public Boleto getBoletoPorCodigo(int codigo) {
-		// TODO Auto-generated method stub
-		return null;
+		return boletoDao.getBoletoPorCodigo(codigo);
 	}
 
-	@Override
 	public List<Boleto> getBoletos() {
-		// TODO Auto-generated method stub
-		return null;
+		return boletoDao.getBoletos();
 	}
 
-	@Override
 	public void actualizar(Boleto boleto) {
-		// TODO Auto-generated method stub
-
+		boletoDao.updateBoleto(boleto);
 	}
 
-	@Override
+
 	public void insertar(Boleto boleto) {
-		// TODO Auto-generated method stub
+		boletoDao.insertarBoleto(boleto);
 
 	}
 
-	@Override
 	public void eliminar(int codigo) {
-		// TODO Auto-generated method stub
-
+		boletoDao.eliminar(codigo);
 	}
 
 }
