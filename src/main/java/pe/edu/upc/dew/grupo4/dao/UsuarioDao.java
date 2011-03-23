@@ -12,7 +12,7 @@ public interface UsuarioDao {
 	
 	void eliminar(int codigo);
 	
-	void updateUsuario(int codigo, String i);
+	void updateUsuario(Usuario usuario);
 	
 	void insertarUsuario(Usuario usuario);
 	
