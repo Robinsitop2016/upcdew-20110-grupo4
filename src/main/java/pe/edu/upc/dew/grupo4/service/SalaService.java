@@ -9,11 +9,11 @@ public interface SalaService {
 
 	List<Sala> getSalas(int codcine);
 
-	void actualizar(Sala sala);
+	void actualizar(Sala sala, String Atributo);
 
 	void insertar(Sala sala);
 
-	void eliminar(int codigo);
+	void eliminar(Sala sala);
 
 
 }
