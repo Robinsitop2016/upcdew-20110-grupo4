@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="pelicula" class="pe.edu.upc.dew.grupo4.model.Pelicula">
+	<property name="codPelicula" value="2334"></property>
+	<property name="namPelicula" value="Star Wars III"></property>
+	<property name="genPelicula" value="Ciencia Ficcion"></property>
+	<property name="duraPelicula" value="150"></property>
+	<property name="clasPelicula" value="0"></property>
+	<property name="estPelicula" value="1"></property>
+	<property name="carPelicula" value="1"></property>
+</bean>
+
+<bean id="clienteDao" class="pe.edu.upc.dew.grupo4.dao.ClienteDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="cliente" class="pe.edu.upc.dew.grupo4.model.Cliente">
+	<property name="codCliente" value="2789"></property>
+	<property name="namCliente" value="David"></property>
+	<property name="lastCliente" value="Peralta"></property>
+	<property name="passCliente" value="dperalta"></property>
+	<property name="dniCliente" value="45678778"></property>
+	<property name="fenaCliente" value="1986-06-24"></property>
+	<property name="dirCliente" value="Jr. Los Claveles 234"></property>
+	<property name="tlfCliente" value="013245678"></property>
+	<property name="mailCliente" value="dperalta@hotmail.com"></property>
+</bean>
+
+<bean id="usuarioDao" class="pe.edu.upc.dew.grupo4.dao.UsuarioDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="usuario" class="pe.edu.upc.dew.grupo4.model.Usuario">
+	<property name="codUsuario" value="1100"></property>
+	<property name="namUsuario" value="Teresa"></property>
+	<property name="lastUsuario" value="Espinoza"></property>
+	<property name="cargoUsuario" value="Administrador"></property>
+	<property name="passUsuario" value="tespinoza"></property>
+	<property name="dniUsuario" value="07022899"></property>
+	<property name="fenaUsuario" value="1950-06-24"></property>
+	<property name="dirUsuario" value="Jr. Los Andes 280"></property>
+	<property name="telfUsuario" value="013267899"></property>
+	<property name="mailUsuario" value="tespinoza@hotmail.com"></property>
+</bean>
+
+<bean id="salaDao" class="pe.edu.upc.dew.grupo4.dao.SalaDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="sala" class="pe.edu.upc.dew.grupo4.model.Sala">
+	<property name="codCine" value="130"></property>
+	<property name="codSala" value="160"></property>
+	<property name="nroSala" value="4"></property>
+	<property name="capaSala" value="40"></property>
+	<property name="atriSala" value="3D"></property>
+</bean>
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ 
+	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	<property name="url" value="jdbc:mysql://localhost:3306/cinema" />
+	<property name="username" value="root" />
+	<property name="password" value="esau" />
+</bean>
+	
+</beans>
