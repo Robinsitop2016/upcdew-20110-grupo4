@@ -62,4 +62,19 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<property name="atriSala" value="3D"></property>
 </bean>
 
+<bean id="funcionDao" class="pe.edu.upc.dew.grupo4.dao.FuncionDaoJdbc">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<bean id="funcion" class="pe.edu.upc.dew.grupo4.model.Funcion">
+	<property name="codFuncion" value="4321"></property>
+	<property name="peliFuncion" value="2334"></property>
+	<property name="hoinFuncion" value="10:00:00"></property>
+	<property name="hofiFuncion" value="12:00:00"></property>
+	<property name="codFuncion" value="1234"></property>
+	<property name="peliFuncion" value="2334"></property>
+	<property name="hoinFuncion" value="10:00:00"></property>
+	<property name="hofiFuncion" value="12:00:00"></property>
+</bean>
+
 </beans>

@@ -25,7 +25,7 @@ public class FuncionDaoTest {
 
 	@Test
 	public void testGetFuncionPorCodigo() {
-		Funcion funcion = funcionDao.getFuncionPorCodigo(1234);
+		Funcion funcion = funcionDao.getFuncionPorCodigo(4321);
 		Assert.assertEquals("Luis", funcion.getPeliFuncion());
 	}
 
@@ -44,7 +44,7 @@ public class FuncionDaoTest {
 
 	@Test
 	public void testDeleteFuncion() {
-		funcionDao.eliminar(2789);
+		funcionDao.eliminar(4321);
 		List<Funcion> funciones = funcionDao.getFunciones();
 		Assert.assertEquals(3, funciones.size());
 	}
