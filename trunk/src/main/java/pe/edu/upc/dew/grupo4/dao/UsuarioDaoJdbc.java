@@ -29,10 +29,10 @@ public class UsuarioDaoJdbc extends SimpleJdbcDaoSupport implements UsuarioDao {
 	}
 
 	@Override
-	public void updateUsuario(int codigo, String dni) {
+	public void updateUsuario(Usuario usuario) {
 		getSimpleJdbcTemplate().update(
 				"update usuario set dniusuario=? where codusuario=?",
-				new Object[] { dni, codigo });
+				new Object[] { usuario.getDniUsuario(), usuario.getCodUsuario() });
 	}
 
 	@Override
