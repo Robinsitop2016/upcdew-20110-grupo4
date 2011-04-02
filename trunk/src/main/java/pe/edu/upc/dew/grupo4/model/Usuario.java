@@ -5,7 +5,7 @@ public class Usuario {
 	private int codUsuario; 		// Codgo de Usuario
 	private String namUsuario; 		// Nombre de Usuario
 	private String lastUsuario; 	// Apellidos de Usuario
-	private String cargoUsuario; 	// Cargo de USuario
+	private String cargoUsuario; 	// Cargo de Usuario
 	private String passUsuario; 	// Password de Usuario
 	private String dniUsuario; 		// Dni de Usuario
 	private String fenaUsuario; 	// Fecha de Nacimiento de Usuario
