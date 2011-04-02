@@ -26,17 +26,12 @@ public class PeliculaServiceTest {
 	public void before() {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
 		this.peliculaDao = context.getBean("peliculaDao", PeliculaDao.class);
-		this.pelicula = context.getBean("pelicula", Pelicula.class);
-		
-		/*		
-		ApplicationContext context = new ClassPathXmlApplicationContext("/applicationContext.xml");
-		this.peliculaService = context.getBean("PeliculaService",PeliculaService.class);
-		*/
+		this.pelicula = context.getBean("pelicula", Pelicula.class);		
 	}
 	@Test
 	public void CrearPelicula(){
 		/*Creo el objeto Pelicula*/
-		Pelicula pelicula=new Pelicula();
+		//Pelicula pelicula=new Pelicula();
 		pelicula.setCodPelicula(10);
 		pelicula.setNamPelicula("pelicula uno");
 		pelicula.setCarPelicula(1);
