@@ -16,7 +16,7 @@ public class UsuarioDaoTest {
 	
 	@Before
 	public void before(){
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		this.usuarioDao = context.getBean("usuarioDao", UsuarioDao.class);
 		this.usuario = context.getBean("usuario", Usuario.class);
 	}
@@ -30,7 +30,7 @@ public class UsuarioDaoTest {
 	@Test
 	public void testGetUsuarios(){
 		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(3, usuarios.size());
+		Assert.assertEquals(1, usuarios.size());
 	}
 	
 	@Test
@@ -49,8 +49,11 @@ public class UsuarioDaoTest {
 	
 	@Test
 	public void testUpdateUsuario(){
-		usuarioDao.updateUsuario(1002, "43837903");
+		this.usuario.setCodUsuario(1002);
+		this.usuario.setNamUsuario("Esau");
+		this.usuario.setDniUsuario("10101010");
+		usuarioDao.updateUsuario(this.usuario);
 		Usuario usuario = usuarioDao.getUsuarioPorCodigo(1002);
-		Assert.assertEquals("43837903", usuario.getDniUsuario());
+		Assert.assertEquals("10132576", usuario.getDniUsuario());
 	}
 }
