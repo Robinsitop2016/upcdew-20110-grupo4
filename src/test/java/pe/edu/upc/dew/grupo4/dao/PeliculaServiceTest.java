@@ -14,6 +14,8 @@ import pe.edu.upc.dew.grupo4.model.Pelicula;
 
 public class PeliculaServiceTest {
 	private PeliculaService peliculaService;
+	private PeliculaDao peliculaDao;
+	private Pelicula pelicula;
 	
 	@BeforeClass
 	public static void beforeClass() {
@@ -22,9 +24,14 @@ public class PeliculaServiceTest {
 	
 	@Before
 	public void before() {
-		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"/applicationContext.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+		this.peliculaDao = context.getBean("peliculaDao", PeliculaDao.class);
+		this.pelicula = context.getBean("pelicula", Pelicula.class);
+		
+		/*		
+		ApplicationContext context = new ClassPathXmlApplicationContext("/applicationContext.xml");
 		this.peliculaService = context.getBean("PeliculaService",PeliculaService.class);
+		*/
 	}
 	@Test
 	public void CrearPelicula(){
