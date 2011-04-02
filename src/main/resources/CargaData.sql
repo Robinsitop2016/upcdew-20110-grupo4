@@ -7,3 +7,6 @@ insert into pelicula(codpelicula, nampelicula, genpelicula, durapelicula, CLASPE
 
 insert into usuario(codiusuario,nameusuario, lastusuario, cargousuario,passusuario, dniusuario, fenausuario, dirusuario, telusuario, mailusuario)
 values(1002, 'Aldo', 'Pacheco', 'Administrador', '1234', '10132576','2011-03-01','sus casa','5555555', 'esau.hernandez@gmail.com' );
+
+insert into usuario(codiusuario,nameusuario, lastusuario, cargousuario,passusuario, dniusuario, fenausuario, dirusuario, telusuario, mailusuario)
+values(1011, 'Esau', 'hernandez', 'Administrador', '1234', '10132576','2011-03-01','sus casa','5555555', 'esau.hernandez@gmail.com' );
