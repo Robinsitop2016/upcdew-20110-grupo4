@@ -30,7 +30,7 @@ public class UsuarioDaoTest {
 	@Test
 	public void testGetUsuarios(){
 		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(1, usuarios.size());
+		Assert.assertEquals(3, usuarios.size());
 	}
 	
 	@Test
@@ -52,7 +52,7 @@ public class UsuarioDaoTest {
 	public void testDeleteUsuario(){
 		usuarioDao.eliminar(1100);
 		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(1, usuarios.size());
+		Assert.assertEquals(3, usuarios.size());
 	}
 	
 	@Test
