@@ -35,16 +35,24 @@ public class UsuarioDaoTest {
 	
 	@Test
 	public void testInsertUsuario(){
-		usuarioDao.insertarUsuario(usuario);
+		this.usuario.setCargoUsuario("Administrador");
+		this.usuario.setCodUsuario(234);
+		this.usuario.setDirUsuario("Su casa");
+		this.usuario.setDniUsuario("11111111");
+		this.usuario.setLastUsuario("Hernandez");
+		this.usuario.setMailUsuario("esau.hernandez@gmail.com");
+		this.usuario.setPassUsuario("1111");
+		this.usuario.setTelfUsuario(12);
+		usuarioDao.insertarUsuario(this.usuario);
 		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(4, usuarios.size());
+		Assert.assertEquals(3, usuarios.size());
 	}
 	
 	@Test
 	public void testDeleteUsuario(){
 		usuarioDao.eliminar(1100);
 		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(3, usuarios.size());
+		Assert.assertEquals(1, usuarios.size());
 	}
 	
 	@Test
@@ -54,6 +62,6 @@ public class UsuarioDaoTest {
 		this.usuario.setDniUsuario("10101010");
 		usuarioDao.updateUsuario(this.usuario);
 		Usuario usuario = usuarioDao.getUsuarioPorCodigo(1002);
-		Assert.assertEquals("10132576", usuario.getDniUsuario());
+		Assert.assertEquals("10101010", usuario.getDniUsuario());
 	}
 }
