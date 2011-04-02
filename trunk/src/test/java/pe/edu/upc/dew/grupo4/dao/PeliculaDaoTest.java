@@ -21,8 +21,8 @@ public class PeliculaDaoTest {
 	
 	@Test
 	public void testGetPeliculaPorCodigo(){
-		Pelicula pelicula = peliculaDao.getPeliculaPorCodigo(3247);
-		Assert.assertEquals("Matrix - Revoluciones", pelicula.getNamPelicula());
+		Pelicula pelicula = peliculaDao.getPeliculaPorCodigo(1);
+		Assert.assertEquals("corazon valiente", pelicula.getNamPelicula());
 	}
 	
 	@Test
@@ -40,7 +40,7 @@ public class PeliculaDaoTest {
 	
 	@Test
 	public void testDeletePelicula(){
-		peliculaDao.eliminar(2334);
+		peliculaDao.eliminar(1);
 		List<Pelicula> peliculas = peliculaDao.getPeliculas();
 		Assert.assertEquals(3, peliculas.size());
 	}
