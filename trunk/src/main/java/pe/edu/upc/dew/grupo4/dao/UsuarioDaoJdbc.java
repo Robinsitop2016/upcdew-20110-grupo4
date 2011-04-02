@@ -12,7 +12,7 @@ public class UsuarioDaoJdbc extends SimpleJdbcDaoSupport implements UsuarioDao {
 	@Override
 	public Usuario getUsuarioPorCodigo(int codigo) {
 		return getSimpleJdbcTemplate().queryForObject(
-				"select * from usuario where codusuario=?",
+				"select * from usuario where codiusuario=?",
 				new BeanPropertyRowMapper<Usuario>(Usuario.class), codigo);
 	}
 
@@ -24,14 +24,14 @@ public class UsuarioDaoJdbc extends SimpleJdbcDaoSupport implements UsuarioDao {
 
 	@Override
 	public void eliminar(int codigo) {
-		getSimpleJdbcTemplate().update("delete from usuario where codusuario=?",
+		getSimpleJdbcTemplate().update("delete from usuario where codiusuario=?",
 				codigo);
 	}
 
 	@Override
 	public void updateUsuario(Usuario usuario) {
 		getSimpleJdbcTemplate().update(
-				"update usuario set dniusuario=? where codusuario=?",
+				"update usuario set dniusuario=? where codiusuario=?",
 				new Object[] { usuario.getDniUsuario(), usuario.getCodUsuario() });
 	}
 
