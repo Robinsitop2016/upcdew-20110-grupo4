@@ -1,0 +1,2 @@
+insert into cine(codcine, nomcine, dircine, mailcine) values(1000,'Cine Start Victoria', 'Av. Republica 4567', null);
+insert into cine(codcine, nomcine, dircine, mailcine) values(1001,'Cine Start La colonia', 'Av. Peru 4567', null);
