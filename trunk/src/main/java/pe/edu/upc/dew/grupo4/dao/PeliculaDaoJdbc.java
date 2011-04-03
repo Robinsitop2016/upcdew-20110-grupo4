@@ -38,11 +38,15 @@ public class PeliculaDaoJdbc extends SimpleJdbcDaoSupport implements
 	@Override
 	public void insertarPelicula(Pelicula pelicula) {
 		getSimpleJdbcTemplate().update(
-				"insert into pelicula values (?,?,?,?,?,?,?)",
-				new Object[] { pelicula.getCodPelicula(),
-						pelicula.getNamPelicula(), pelicula.getGenPelicula(),
-						pelicula.getDuraPelicula(), pelicula.getClasPelicula(),
-						pelicula.getEstPelicula(), pelicula.getCarPelicula()});
+				"Insert into pelicula values (?,?,?,?,?,?)",
+				new Object[] 
+				    { pelicula.getCodPelicula(),
+						pelicula.getNamPelicula(), 
+						pelicula.getGenPelicula(),
+						pelicula.getDuraPelicula(), 
+						pelicula.getClasPelicula(),
+						pelicula.getEstPelicula(), 
+					});
 	}
 
 }
