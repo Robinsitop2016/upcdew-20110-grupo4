@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
 
 import pe.edu.upc.dew.grupo4.service.PeliculaService;
 import pe.edu.upc.dew.grupo4.model.Pelicula;
@@ -26,11 +27,14 @@ public class PeliculaServiceTest {
 	public void before() {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		this.peliculaDao = context.getBean("peliculaDao", PeliculaDao.class);
-		this.pelicula = context.getBean("pelicula", Pelicula.class);		
+		this.pelicula = context.getBean("pelicula", Pelicula.class);
+		this.peliculaService = context.getBean("peliculaService", PeliculaService.class);
+		
 	}
 	@Test
-	public void CrearPelicula(){
+	public void CrearPelicula(){ 
 		/*Creo el objeto Pelicula*/
+		
 		Pelicula pelicula=new Pelicula();
 		pelicula.setCodPelicula(10);
 		pelicula.setNamPelicula("pelicula uno");
@@ -40,11 +44,13 @@ public class PeliculaServiceTest {
 		pelicula.setEstPelicula(1);
 		pelicula.setGenPelicula("drama");
 		
-		//peliculaService.insertar(pelicula);
+		this.peliculaService.setPeliculaDao(this.peliculaDao);
+		//inserto la pelicula;
+		this.peliculaService.insertar(pelicula);
 		
 		//Verifico si creo la pelicula
 		
-		Pelicula peliculaGrabada=peliculaService.getPeliculaPorCodigo(10);
+		Pelicula peliculaGrabada= this.peliculaService.getPeliculaPorCodigo(10);
 		Assert.assertEquals(10, peliculaGrabada.getCodPelicula());
 		
 		//Assert.assertEquals(10, 10);
