@@ -58,39 +58,31 @@ public class PeliculaServiceTest {
 	
 	@Test
 	public void ConsultarPelicula(){
-		
-		
 		//Verifico si puedo consultar la pelicula
-		this.pelicula = peliculaService.getPeliculaPorCodigo(1);
-		Assert.assertEquals(1, this.pelicula.getCodPelicula());
-		
+		this.pelicula = peliculaService.getPeliculaPorCodigo(10);
+		Assert.assertEquals(10, this.pelicula.getCodPelicula());		
 	}
-}	
-/*	
+	
+	
 	@Test
 	public void EliminarPelicula(){
 
-		Pelicula pelicula=new Pelicula();
-		pelicula.setCoPelicula(12);
-		pelicula.setNombre("Spiderman 2");
-
-		peliculaService.crear(pelicula);
+		this.peliculaService.eliminar(10);
 		
-		//Elimino
-		peliculaService.eliminar(12);
-		
-		//Verifico que se elimino
-		try
-		{
-			Pelicula peliculaConsultada= peliculaService.getPelicula(12);
-			Assert.fail();
-		}catch(EmptyResultDataAccessException e )
-		{
-			//OK:
+		//Verifico si puedo consultar la pelicula
+		this.pelicula = peliculaService.getPeliculaPorCodigo(10);
+		//Assert.assertEquals(10, this.pelicula.getCodPelicula());		
+		if (this.pelicula==null){
+			Assert.assertEquals(10, 10);
 		}
-		
+		else{
+			Assert.assertEquals(10, 11);
+		}		
 	}
 	
+	
+}	
+/*	
 	@Test
 	public void ActualizarPelicula(){
 	
