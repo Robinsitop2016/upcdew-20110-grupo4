@@ -63,6 +63,10 @@
 	<property name="atriSala" value="3D"></property>
 </bean>
 
+<bean id="peliculaService" class="pe.edu.upc.dew.grupo4.service.PeliculaServiceImple">
+	
+</bean>
+
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
  
 	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
