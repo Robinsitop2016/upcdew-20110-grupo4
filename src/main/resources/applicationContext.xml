@@ -17,6 +17,11 @@
 	<property name="dataSource" ref="dataSource" />
 </bean>
 
+<bean id="peliculaDao" class="pe.edu.upc.dew.grupo4.dao.PeliculaDaoJdbc">
+	<property name="dataSource" ref="dataSource">
+	</property>
+</bean>
+
 <bean id="cliente" class="pe.edu.upc.dew.grupo4.model.Cliente">
 	<property name="codCliente" value="2789"></property>
 	<property name="namCliente" value="David"></property>
