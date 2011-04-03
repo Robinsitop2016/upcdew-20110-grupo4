@@ -70,14 +70,15 @@ public class PeliculaServiceTest {
 		this.peliculaService.eliminar(10);
 		
 		//Verifico si puedo consultar la pelicula
-		this.pelicula = peliculaService.getPeliculaPorCodigo(10);
-		//Assert.assertEquals(10, this.pelicula.getCodPelicula());		
-		if (this.pelicula==null){
-			Assert.assertEquals(10, 10);
-		}
-		else{
-			Assert.assertEquals(10, 11);
-		}		
+		try
+			{
+				this.pelicula = peliculaService.getPeliculaPorCodigo(10);
+				Assert.fail();
+			}
+		catch(EmptyResultDataAccessException e )
+			{
+			//OK:
+			}
 	}
 	
 	
