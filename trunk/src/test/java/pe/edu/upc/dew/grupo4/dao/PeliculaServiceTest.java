@@ -1,7 +1,7 @@
 package pe.edu.upc.dew.grupo4.dao;
 
 import junit.framework.Assert;
-
+import java.util.List;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -24,14 +24,14 @@ public class PeliculaServiceTest {
 	
 	@Before
 	public void before() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		this.peliculaDao = context.getBean("peliculaDao", PeliculaDao.class);
 		this.pelicula = context.getBean("pelicula", Pelicula.class);		
 	}
 	@Test
 	public void CrearPelicula(){
 		/*Creo el objeto Pelicula*/
-		//Pelicula pelicula=new Pelicula();
+		Pelicula pelicula=new Pelicula();
 		pelicula.setCodPelicula(10);
 		pelicula.setNamPelicula("pelicula uno");
 		pelicula.setCarPelicula(1);
@@ -40,12 +40,14 @@ public class PeliculaServiceTest {
 		pelicula.setEstPelicula(1);
 		pelicula.setGenPelicula("drama");
 		
-		peliculaService.insertar(pelicula);
+		//peliculaService.insertar(pelicula);
 		
 		//Verifico si creo la pelicula
+		
 		Pelicula peliculaGrabada=peliculaService.getPeliculaPorCodigo(10);
 		Assert.assertEquals(10, peliculaGrabada.getCodPelicula());
 		
+		//Assert.assertEquals(10, 10);
 	}
 }	
 /*	
