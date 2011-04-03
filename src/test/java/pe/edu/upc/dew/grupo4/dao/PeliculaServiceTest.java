@@ -29,24 +29,23 @@ public class PeliculaServiceTest {
 		this.peliculaDao = context.getBean("peliculaDao", PeliculaDao.class);
 		this.pelicula = context.getBean("pelicula", Pelicula.class);
 		this.peliculaService = context.getBean("peliculaService", PeliculaService.class);
+		this.peliculaService.setPeliculaDao(this.peliculaDao);
 		
 	}
 	@Test
 	public void CrearPelicula(){ 
 		/*Creo el objeto Pelicula*/
 		
-		Pelicula pelicula=new Pelicula();
-		pelicula.setCodPelicula(10);
-		pelicula.setNamPelicula("pelicula uno");
-		pelicula.setCarPelicula(1);
-		pelicula.setClasPelicula(1);
-		pelicula.setDuraPelicula(120);
-		pelicula.setEstPelicula(1);
-		pelicula.setGenPelicula("drama");
+		this.pelicula.setCodPelicula(10);
+		this.pelicula.setNamPelicula("pelicula uno");
+		this.pelicula.setCarPelicula(1);
+		this.pelicula.setClasPelicula(1);
+		this.pelicula.setDuraPelicula(120);
+		this.pelicula.setEstPelicula(1);
+		this.pelicula.setGenPelicula("drama");
 		
-		this.peliculaService.setPeliculaDao(this.peliculaDao);
 		//inserto la pelicula;
-		this.peliculaService.insertar(pelicula);
+		this.peliculaService.insertar(this.pelicula);
 		
 		//Verifico si creo la pelicula
 		
@@ -55,18 +54,19 @@ public class PeliculaServiceTest {
 		
 		//Assert.assertEquals(10, 10);
 	}
-}	
-/*	
+	
+	
 	@Test
 	public void ConsultarPelicula(){
 		
 		
 		//Verifico si puedo consultar la pelicula
-		Pelicula peliculaGrabada=peliculaService.getPelicula(1);
-		Assert.assertEquals(1, peliculaGrabada.getCoPelicula());
+		this.pelicula = peliculaService.getPeliculaPorCodigo(1);
+		Assert.assertEquals(1, this.pelicula.getCodPelicula());
 		
 	}
-	
+}	
+/*	
 	@Test
 	public void EliminarPelicula(){
 
