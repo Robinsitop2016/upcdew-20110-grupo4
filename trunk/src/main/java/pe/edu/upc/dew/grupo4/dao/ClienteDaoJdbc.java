@@ -10,7 +10,7 @@ public class ClienteDaoJdbc extends SimpleJdbcDaoSupport implements ClienteDao {
 	@Override
 	public Cliente getClientePorCodigo(int codigo) {
 		return getSimpleJdbcTemplate().queryForObject(
-				"select * from cliente where codcliente=?",
+				"select * from cliente where codicliente=?",
 				new BeanPropertyRowMapper<Cliente>(Cliente.class), codigo);
 	}
 
@@ -23,13 +23,13 @@ public class ClienteDaoJdbc extends SimpleJdbcDaoSupport implements ClienteDao {
 	@Override
 	public void eliminar(int codigo) {
 		getSimpleJdbcTemplate().update(
-				"delete from cliente where codcliente=?", codigo);
+				"delete from cliente where codicliente=?", codigo);
 	}
 
 	@Override
 	public void updateCliente(int codigo, String nombre) {
 		getSimpleJdbcTemplate().update(
-				"update cliente set namcliente=? where codcliente=?",
+				"update cliente set namecliente=? where codicliente=?",
 				new Object[] { nombre, codigo });
 	}
 
