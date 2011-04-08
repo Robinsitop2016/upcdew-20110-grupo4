@@ -39,6 +39,12 @@ public class ClienteDaoTest {
 	}
 	
 	@Test
+	public void testGetClientePorCodigo(){
+		Cliente cliente = clienteDao.getClientePorCodigo(123);
+		Assert.assertEquals(123, cliente.getCodCliente());
+	}	
+	
+	@Test
 	public void testDeleteCliente(){
 		clienteDao.eliminar(123);
 		try{
@@ -51,19 +57,5 @@ public class ClienteDaoTest {
 		}
 
 	}
-	
-	@Test
-	public void testGetClientePorCodigo(){
-		Cliente cliente = clienteDao.getClientePorCodigo(123);
-		Assert.assertEquals("esau", cliente.getNamCliente());
-	}
-		
-	
-	@Test
-	public void testUpdateCliente(){
-		clienteDao.updateCliente(2123, "Eduardo");
-		Cliente cliente = clienteDao.getClientePorCodigo(2123);
-		Assert.assertEquals("Eduardo", cliente.getNamCliente());
-	}
-
+			
 }
