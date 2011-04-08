@@ -83,27 +83,3 @@ public class PeliculaServiceTest {
 	
 	
 }	
-/*	
-	@Test
-	public void ActualizarPelicula(){
-	
-		Pelicula pelicula=peliculaService.getPelicula(1);
-		
-		//Actualizo el Nombre
-		
-		pelicula.setNombre("Spiderman 3");
-		
-		peliculaService.actualizar(pelicula);
-		
-		//Obtengo pelicula y comparo el nombre
-		Pelicula peliculaConsultada=peliculaService.getPelicula(1);
-		Assert.assertEquals("Spiderman 3", peliculaConsultada.getNombre());
-		
-		
-	}
-
-	
-}
-
-*/
-
