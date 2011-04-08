@@ -11,32 +11,35 @@ import pe.edu.upc.dew.grupo4.model.Pelicula;
 public class PeliculaDaoTest {
 	private PeliculaDao peliculaDao;
 	private Pelicula pelicula;
-	
+
 	@Before
 	public void before(){
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		this.peliculaDao = context.getBean("peliculaDao", PeliculaDao.class);
 		this.pelicula = context.getBean("pelicula", Pelicula.class);
 	}
 	
 	@Test
-	public void testGetPeliculaPorCodigo(){
-		Pelicula pelicula = peliculaDao.getPeliculaPorCodigo(1);
-		Assert.assertEquals("corazon valiente", pelicula.getNamPelicula());
-	}
-	
-	@Test
-	public void testGetPeliculas(){
-		List<Pelicula> peliculas = peliculaDao.getPeliculas();
-		Assert.assertEquals(3, peliculas.size());
-	}
-	
-	@Test
 	public void testInsertPelicula(){
-		peliculaDao.insertarPelicula(pelicula);		
-		List<Pelicula> peliculas = peliculaDao.getPeliculas();
-		Assert.assertEquals(4, peliculas.size());
+		this.pelicula.setCodPelicula(145);
+		this.pelicula.setCarPelicula(1);
+		this.pelicula.setClasPelicula(1);
+		this.pelicula.setDuraPelicula(120);
+		this.pelicula.setGenPelicula("drama");
+		this.pelicula.setNamPelicula("peli 1");
+		this.peliculaDao.insertarPelicula(this.pelicula);		
+		Pelicula peliculaprueba = peliculaDao.getPeliculaPorCodigo(145);
+		Assert.assertEquals(145, peliculaprueba.getCodPelicula());
 	}
+	
+	
+	
+	@Test
+	public void testGetPeliculaPorCodigo(){
+		Pelicula pelicula = peliculaDao.getPeliculaPorCodigo(145);
+		Assert.assertEquals(145, pelicula.getCodPelicula());
+	}
+	
 	
 	@Test
 	public void testDeletePelicula(){
