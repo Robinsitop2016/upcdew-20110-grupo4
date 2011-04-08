@@ -34,8 +34,8 @@ public class UsuarioDaoTest {
 		this.usuario.setTelfUsuario(12);
 		this.usuarioDao.insertarUsuario(this.usuario);
 		
-		Usuario usuarioPrueba = this.usuarioDao.getUsuarioPorCodigo(234);
-		Assert.assertEquals(234, usuarioPrueba.getCodUsuario());
+		this.usuario = this.usuarioDao.getUsuarioPorCodigo(234);
+		Assert.assertEquals(234, this.usuario.getCodUsuario());
 		
 	}
 	/*
