@@ -1,11 +1,12 @@
 package pe.edu.upc.dew.grupo4.dao;
 
-import java.util.List;
-import org.junit.Assert;
+import junit.framework.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 import pe.edu.upc.dew.grupo4.model.Usuario;
 
@@ -21,18 +22,6 @@ public class UsuarioDaoTest {
 	}
 
 	@Test
-	public void testGetUsuarioPorCodigo(){
-		Usuario usuario = usuarioDao.getUsuarioPorCodigo(1002);
-		Assert.assertEquals("Aldo", usuario.getNamUsuario());
-	}
-	
-	@Test
-	public void testGetUsuarios(){
-		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(3, usuarios.size());
-	}
-	
-	@Test
 	public void testInsertUsuario(){
 		this.usuario.setCargoUsuario("Administrador");
 		this.usuario.setCodUsuario(234);
@@ -41,26 +30,34 @@ public class UsuarioDaoTest {
 		this.usuario.setLastUsuario("Hernandez");
 		this.usuario.setMailUsuario("esau.hernandez@gmail.com");
 		this.usuario.setPassUsuario("1111");
+		this.usuario.setNamUsuario("Carlos");
 		this.usuario.setTelfUsuario(12);
-		usuarioDao.insertarUsuario(this.usuario);
-		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(3, usuarios.size());
+		this.usuarioDao.insertarUsuario(this.usuario);
+		
+		Usuario usuarioPrueba = this.usuarioDao.getUsuarioPorCodigo(234);
+		Assert.assertEquals(234, usuarioPrueba.getCodUsuario());
+		
 	}
+	/*
+	@Test
+	public void testGetUsuarioPorCodigo(){
+		Usuario usuario = this.usuarioDao.getUsuarioPorCodigo(234);
+		Assert.assertEquals(234, usuario.getCodUsuario());
+	}
+	*/
 	
 	@Test
 	public void testDeleteUsuario(){
-		usuarioDao.eliminar(1100);
-		List<Usuario> usuarios = usuarioDao.getUsuarios();
-		Assert.assertEquals(3, usuarios.size());
+		this.usuarioDao.eliminar(234);
+		try
+		{
+			this.usuario = this.usuarioDao.getUsuarioPorCodigo(234);
+			Assert.fail();
+		}
+		catch(EmptyResultDataAccessException e )
+		{
+		//OK:
+		}		
 	}
 	
-	@Test
-	public void testUpdateUsuario(){
-		this.usuario.setCodUsuario(1002);
-		this.usuario.setNamUsuario("Esau");
-		this.usuario.setDniUsuario("10101010");
-		usuarioDao.updateUsuario(this.usuario);
-		Usuario usuario = usuarioDao.getUsuarioPorCodigo(1002);
-		Assert.assertEquals("10101010", usuario.getDniUsuario());
-	}
 }
