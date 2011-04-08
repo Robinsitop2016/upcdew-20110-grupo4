@@ -48,7 +48,9 @@
 </bean>
 
 <bean id="usuarioDao" class="pe.edu.upc.dew.grupo4.dao.UsuarioDaoJdbc">
-	<property name="dataSource" ref="dataSource" />
+	<property name="dataSource" ref="dataSource" >
+	</property>	
+	
 </bean>
 
 
