@@ -6,8 +6,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
 
 import pe.edu.upc.dew.grupo4.model.Pelicula;
 
-public class PeliculaDaoJdbc extends SimpleJdbcDaoSupport implements
-		PeliculaDao {
+public class PeliculaDaoJdbc extends SimpleJdbcDaoSupport implements PeliculaDao {
 
 	@Override
 	public Pelicula getPeliculaPorCodigo(int codigo) {
