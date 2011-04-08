@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.EmptyResultDataAccessException;
+
 import pe.edu.upc.dew.grupo4.model.Pelicula;
 
 public class PeliculaDaoTest {
@@ -43,16 +45,17 @@ public class PeliculaDaoTest {
 	
 	@Test
 	public void testDeletePelicula(){
-		peliculaDao.eliminar(1);
-		List<Pelicula> peliculas = peliculaDao.getPeliculas();
-		Assert.assertEquals(3, peliculas.size());
+		this.peliculaDao.eliminar(145);
+		try
+			{
+			this.pelicula = peliculaDao.getPeliculaPorCodigo(145);
+			Assert.fail();
+			}
+		catch(EmptyResultDataAccessException e )
+			{
+		//OK:
+			}
+		
 	}
 	
-	@Test
-	public void testUpdatePelicula(){
-		peliculaDao.updatePelicula(3248, "Warcraft III");
-		Pelicula pelicula = peliculaDao.getPeliculaPorCodigo(3248);
-		Assert.assertEquals("Warcraft III", pelicula.getNamPelicula());
-	}
-
 }
