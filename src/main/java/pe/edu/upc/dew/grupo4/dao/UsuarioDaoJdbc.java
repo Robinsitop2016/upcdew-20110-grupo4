@@ -1,7 +1,6 @@
 package pe.edu.upc.dew.grupo4.dao;
 
 import java.util.List;
-
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
 
@@ -13,7 +12,7 @@ public class UsuarioDaoJdbc extends SimpleJdbcDaoSupport implements UsuarioDao {
 	public Usuario getUsuarioPorCodigo(int codigo) {
 		return getSimpleJdbcTemplate().queryForObject(
 				"select * from usuario where codiusuario=?",
-				new BeanPropertyRowMapper<Usuario>(Usuario.class), codigo);
+				new BeanPropertyRowMapper<Usuario>(Usuario.class), codigo);		
 	}
 
 	@Override
@@ -39,12 +38,19 @@ public class UsuarioDaoJdbc extends SimpleJdbcDaoSupport implements UsuarioDao {
 	public void insertarUsuario(Usuario usuario) {
 		getSimpleJdbcTemplate().update(
 				"insert into usuario values (?,?,?,?,?,?,?,?,?,?)",
-				new Object[] { usuario.getCodUsuario(),
-						usuario.getNamUsuario(), usuario.getLastUsuario(),
-						usuario.getCargoUsuario(), usuario.getPassUsuario(),
-						usuario.getDniUsuario(), usuario.getFenaUsuario(),
-						usuario.getDirUsuario(), usuario.getTelfUsuario(),
-						usuario.getMailUsuario() });
+				new Object[] { 	
+						usuario.getCodUsuario(),
+						usuario.getNamUsuario(), 
+						usuario.getLastUsuario(),
+						usuario.getCargoUsuario(), 
+						usuario.getPassUsuario(),
+						usuario.getDniUsuario(), 
+						usuario.getFenaUsuario(),
+						usuario.getDirUsuario(), 
+						usuario.getTelfUsuario(),
+						usuario.getMailUsuario() 
+					}
+				);
 	}
 
 }
